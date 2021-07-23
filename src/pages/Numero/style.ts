@@ -14,7 +14,12 @@ export const Form = styled.form`
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 30px;
-  border-radius: 10px;
 
   position: relative;
+
+  > input {
+    margin: 3px 0;
+    padding: 5px;
+    border-radius: 5px;
+  }
 `;
