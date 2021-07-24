@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import Numero from "./pages/Numero";
+import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Numero />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
