@@ -9,17 +9,14 @@ const Numero: React.FC = () => {
     const [fim, setFim] = useState(100)
 
     const handleNumeroDigitado = useCallback((numero) => {
-        console.log(numero)
         setNumero(numero)
     }, [])
 
     const handleInicioDigitado = useCallback((inicio) => {
-        console.log(inicio)
         setInicio(inicio)
     }, [])
 
     const handleFimDigitado = useCallback((fim) => {
-        console.log(fim)
         setFim(fim)
     }, [])
 
@@ -38,7 +35,7 @@ const Numero: React.FC = () => {
                 { headers: { Accept: `application/json`}
                   }
             ).then((response) => {
-                alert('cadastro realizado com sucesso!')
+                alert('Sorteio realizado com sucesso!')
             })
             .catch((err) => {
                 console.error("ops! ocorreu um erro" + err);
