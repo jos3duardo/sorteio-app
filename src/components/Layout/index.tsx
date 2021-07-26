@@ -1,18 +1,21 @@
 import React from "react";
-import Navbar from "../Navbar";
-import Content from "../Content";
+
+import {Container} from "./style";
+
+import Header from "../Header";
+import Footer from "../Footer";
 
 const Layout: React.FC = ({children}) => {
 
     return (
-        <>
-            <Navbar />
-            <div  className="container">
-                <Content>
-                    {children}
-                </Content>
+        <Container>
+            <Header />
+            <div  className="container py-5">
+                {children}
             </div>
-        </>
+
+            <Footer />
+        </Container>
     )
 }
 

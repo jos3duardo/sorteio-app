@@ -6,11 +6,12 @@ import Numero from "../pages/Numero";
 import Nome from "../pages/Nome";
 import Amigo from "../pages/Amigo";
 import Resultado from "../pages/Resultado";
+import Home from "../pages/Home";
 
 const AppRoutes: React.FC = () => (
     <Layout>
         <Switch>
-            <Route path="/" exact component={Numero} />
+            <Route path="/" exact component={Home} />
             <Route path="/numero" exact component={Numero} />
             <Route path="/nome" exact component={Nome} />
             <Route path="/resultado/:tipo/:id" exact component={Resultado} />

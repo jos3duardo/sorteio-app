@@ -125,7 +125,7 @@ const Amigo: React.FC = () => {
                         </div>
                         {
                             showLista &&
-                            <table className="table mt-2">
+                            <table className="table mt-2 bg-white">
                                 <thead>
                                 <tr>
                                     <th scope="col">#</th>
