@@ -44,7 +44,7 @@ const Numero: React.FC = () => {
             setLink('https://sorteio.jos3duardo.com.br/resultado/numero/' + dados.id)
         })
             .catch((err) => {
-                alert('Confira os daoos do sorteio')
+                alert('Confira os dados do sorteio')
                 console.error("ops! ocorreu um erro" + err.response.data);
             });
     }, [])
