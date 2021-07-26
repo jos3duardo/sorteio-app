@@ -9,9 +9,9 @@ const Navbar: React.FC = () => {
                     <button type="button" className="btn btn-secondary">Secondary</button>
                 </div>
             </div>
-            <nav className="navbar navbar-dark bg-dark">
+            <nav className="navbar navbar-dark bg-dark ">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">Sorteio Simples</a>
+                    <a className="navbar-brand" href="/">Sorteio Simples</a>
                     <div className="dropdown dropstart">
                         <button className="btn btn-secondary dropdown-toggle-split"  type="button" id="dropdownMenuButton1"
                                 data-bs-toggle="dropdown" aria-expanded="false">

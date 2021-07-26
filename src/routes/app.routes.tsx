@@ -13,7 +13,7 @@ const AppRoutes: React.FC = () => (
             <Route path="/" exact component={Numero} />
             <Route path="/numero" exact component={Numero} />
             <Route path="/nome" exact component={Nome} />
-            <Route path="/resultado/:id" exact component={Resultado} />
+            <Route path="/resultado/:tipo/:id" exact component={Resultado} />
             <Route path="/amigo" exact component={Amigo} />
         </Switch>
     </Layout>
