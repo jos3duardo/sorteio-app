@@ -44,7 +44,7 @@ const Numero: React.FC = () => {
             setLink(process.env.REACT_APP_LINK + 'resultado/numero/' + dados.id)
         })
             .catch((err) => {
-                alert('Confira se os daoos do sorteio')
+                alert('Confira os daoos do sorteio')
                 console.error("ops! ocorreu um erro" + err.response.data);
             });
     }, [])
