@@ -44,7 +44,7 @@ const Nome: React.FC = () => {
 
                 setResultado(dados.resultado)
 
-                setLink(process.env.REACT_APP_LINK + 'resultado/nome/' + dados.id)
+                setLink('https://sorteio.jos3duardo.com.br/resultado/nome/' + dados.id)
 
             })
                 .catch((err) => {
