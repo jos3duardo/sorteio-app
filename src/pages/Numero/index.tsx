@@ -41,7 +41,7 @@ const Numero: React.FC = () => {
         ).then((response) => {
             const dados = response.data
             setResultado(dados.resultado)
-            setLink('https://sorteio.jos3duardo.com.br/resultado/numero/' + dados.id)
+            setLink('https://sorteio.space/resultado/numero/' + dados.id)
         })
             .catch((err) => {
                 alert('Confira os dados do sorteio')

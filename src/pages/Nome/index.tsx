@@ -44,7 +44,7 @@ const Nome: React.FC = () => {
 
                 setResultado(dados.resultado)
 
-                setLink('https://sorteio.jos3duardo.com.br/resultado/nome/' + dados.id)
+                setLink('https://sorteio.space/resultado/nome/' + dados.id)
 
             })
                 .catch((err) => {
