@@ -10,3 +10,7 @@ export const Img = styled.img`
   width: auto;
   height: auto;
 `
+
+export const Ins = styled.ins`
+display: block;
+`
