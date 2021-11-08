@@ -6,10 +6,16 @@ const Footer: React.FC = () => {
     let ano = new Date()
 
     return (
-        <Container className="footer mt-auto py-3 bg-dark">
-                <div className="container">
-                    <span className="text-muted">Todos os direitos reservados <a href="https://jos3duardo.com.br/" target="_blank">Jos3duardo</a> {ano.getFullYear()}.</span>
-                </div>
+        <Container className="text-muted py-5">
+            <div className="container">
+                <p className="float-end mb-1">
+                    <a href="#">Back to top</a>
+                </p>
+                <p className="mb-1">Album example is &copy; Bootstrap, but please download and customize it for
+                    yourself!</p>
+                <p className="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a
+                    href="/docs/5.1/getting-started/introduction/">getting started guide</a>.</p>
+            </div>
         </Container>
     )
 }
