@@ -3,8 +3,8 @@ import validator from 'validator'
 import api from "../../services/api";
 
 interface ILista {
-    nome:string,
-    email:string
+    nome: string,
+    email: string
 }
 
 const Amigo: React.FC = () => {
@@ -22,26 +22,26 @@ const Amigo: React.FC = () => {
     const handleEmailDigitado = useCallback((email) => {
         if (!validator.isEmail(email)) {
             setEmailError('Email invalido!')
-        }else{
+        } else {
             setEmailError('')
         }
         setEmail(email)
     }, [])
 
-    const handleLista = useCallback(( nome,email ) => {
+    const handleLista = useCallback((nome, email) => {
 
-        if (nome && validator.isEmail(email)){
-            setLista([...lista, { nome, email }])
+        if (nome && validator.isEmail(email)) {
+            setLista([...lista, {nome, email}])
             setNome('')
             setEmail('')
             setShowLista(true)
-        }else{
+        } else {
             alert('Preencha os campos corretamete')
         }
     }, [lista])
 
     const handleCadastro = useCallback((
-       lista,
+        lista,
     ) => {
         api.post(`amigo`,
             {
@@ -51,14 +51,13 @@ const Amigo: React.FC = () => {
                 headers: {Accept: `application/json`}
             }
         ).then((response) => {
-            const dados = response.data
             setResultado(true)
             setLista([]);
             setShowLista(false)
         })
-        .catch((err) => {
-            alert(err.response.data.errors.amigos)
-        });
+            .catch((err) => {
+                alert(err.response.data.errors.amigos)
+            });
     }, [])
 
 
@@ -74,7 +73,7 @@ const Amigo: React.FC = () => {
                             <p>Os participantes receberão um email para acessarem o resultado do sorteio.</p>
                         </div>
                         <div className="row mt-3">
-                            <button  className={"btn btn-primary"}  onClick={() => setResultado(false)}>Novo</button>
+                            <button className={"btn btn-primary"} onClick={() => setResultado(false)}>Novo</button>
                         </div>
                     </div>
                 </div>
@@ -137,7 +136,7 @@ const Amigo: React.FC = () => {
                                 <tbody>
                                 {lista.map((lista, index) => (
                                     <tr key={index}>
-                                        <th scope="row">{index+1}</th>
+                                        <th scope="row">{index + 1}</th>
                                         <td>{lista.nome}</td>
                                         <td>{lista.email}</td>
                                     </tr>

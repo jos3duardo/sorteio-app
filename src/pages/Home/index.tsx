@@ -11,11 +11,11 @@ const Home: React.FC = () => {
             <Content>
                 <div className="row justify-content-center align-items-center">
                     <Link href="/numero" className="btn btn-primary col-md-3">Sorteio de Numeros</Link>
-                    <Link  href="/nome" className="btn btn-secondary col-md-3">Sorteio de Nomes</Link>
-                    <Link  href="/amigo" className="btn btn-success col-md-3">Sorteio de Amigo Secreto</Link>
+                    <Link href="/nome" className="btn btn-secondary col-md-3">Sorteio de Nomes</Link>
+                    <Link href="/amigo" className="btn btn-success col-md-3">Sorteio de Amigo Secreto</Link>
                 </div>
             </Content>
-            <Extra />
+            <Extra/>
             <br/>
             <br/>
             <br/>
