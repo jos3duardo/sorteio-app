@@ -14,4 +14,4 @@ COPY . ./
 
 RUN npm run build
 
-CMD ["npm", "prod"]
+CMD ["npm", "start"]
