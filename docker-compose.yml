@@ -1,8 +1,8 @@
 version: '3.7'
 
 services:
-  sorteio-app:
-    container_name: sorteio-app
+  sorteio-web:
+    container_name: sorteio-web
     build:
       context: .
       dockerfile: Dockerfile
