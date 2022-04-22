@@ -1,24 +1,48 @@
 import React from "react";
 
-import {Container, Link} from "./style";
-
-import Extra from "../../components/Extra";
-import Content from "../../components/Content";
+import {Container} from "./style";
+import {Img} from "../../components/Extra/style";
+import numeros from "../../assets/numeros-sorteio.jpg";
+import tempo from "../../assets/tempo.jpg";
+import ajuda from "../../assets/ajuda.jpg";
 
 const Home: React.FC = () => {
     return (
         <Container>
-            <Content>
-                <div className="row justify-content-center align-items-center">
-                    <Link href="/numero" className="btn btn-primary col-md-3">Sorteio de Numeros</Link>
-                    <Link href="/nome" className="btn btn-secondary col-md-3">Sorteio de Nomes</Link>
-                    <Link href="/amigo" className="btn btn-success col-md-3">Sorteio de Amigo Secreto</Link>
+            <div className="row justify-content-center align-items-center mb-4 mt-5">
+                <div className="col-md-4 ">
+                    <div className="card">
+                        <div className="col mx-auto text-center">
+                            <Img src={numeros} className="card-img-top rounded float-start" alt=""/>
+                        </div>
+                        <div className="card-body">
+                            <a href="/numero" className="btn btn-primary">Sorteio de Numeros</a>
+                        </div>
+                    </div>
                 </div>
-            </Content>
-            <Extra/>
-            <br/>
-            <br/>
-            <br/>
+
+                <div className="col-md-4">
+                    <div className="card">
+                        <div className="col mx-auto text-center">
+                            <Img src={tempo} className="card-img-top" alt=""/>
+                        </div>
+                        <div className="card-body">
+                            <a href="/nome" className="btn btn-primary">Sorteio de Nomes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-md-4">
+                    <div className="card">
+                        <div className="col mx-auto text-center">
+                            <Img src={ajuda} className="card-img-top" alt=""/>
+                        </div>
+                        <div className="card-body ">
+                            <a href="/amigo" className="btn btn-primary">Sorteio de Amigo Secreto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </Container>
     )
 }

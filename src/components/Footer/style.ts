@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.footer`
-  background: #232323;
-
-  width: auto;
-  height: 80px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Height of the footer */
+  background-color: #fa7c5e;
 `
