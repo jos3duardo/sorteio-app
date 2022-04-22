@@ -43,9 +43,7 @@ const Nome: React.FC = () => {
                 const dados = response.data
 
                 setResultado(dados.resultado)
-
-                setLink('https://sorteio.jos3duardo.com.br/resultado/nome/' + dados.id)
-
+                setLink(process.env.REACT_APP_LINK + 'resultado/nome/' + dados.id)
             })
                 .catch((err) => {
                     console.log(err.response)
@@ -93,15 +91,15 @@ const Nome: React.FC = () => {
             </div>
 
             {link &&
-            <div className="alert alert-primary mt-3" role="alert">
-                {link &&
-                <p>Resultado: {resultado}</p>
-                }
+                <div className="alert alert-primary mt-3" role="alert">
+                    {link &&
+                        <p>Resultado: {resultado}</p>
+                    }
 
-                {link &&
-                <a href={link}>Link do resultado: {link}</a>
-                }
-            </div>
+                    {link &&
+                        <a href={link}>Link do resultado: {link}</a>
+                    }
+                </div>
             }
 
             <div className="row">

@@ -41,7 +41,8 @@ const Numero: React.FC = () => {
         ).then((response) => {
             const dados = response.data
             setResultado(dados.resultado)
-            setLink('https://sorteio.jos3duardo.com.br/resultado/numero/' + dados.id)
+            setLink(process.env.REACT_APP_LINK + 'resultado/numero/' + dados.id)
+
         })
             .catch((err) => {
                 alert('Confira os dados do sorteio')
@@ -97,15 +98,15 @@ const Numero: React.FC = () => {
             </form>
 
             {link &&
-            <div className="alert alert-primary mt-3" role="alert">
-                {link &&
-                <p>Resultado: {resultado}</p>
-                }
+                <div className="alert alert-primary mt-3" role="alert">
+                    {link &&
+                        <p>Resultado: {resultado}</p>
+                    }
 
-                {link &&
-                <span>Link do resultado:<a href={link}> {link}</a></span>
-                }
-            </div>
+                    {link &&
+                        <span>Link do resultado:<a href={link}> {link}</a></span>
+                    }
+                </div>
             }
 
             <div className="row">
