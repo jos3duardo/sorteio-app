@@ -41,7 +41,7 @@ const Numero: React.FC = () => {
         ).then((response) => {
             const dados = response.data
             setResultado(dados.resultado)
-            setLink(process.env.REACT_APP_LINK + 'resultado/numero/' + dados.id)
+            setLink('https://sorteio.space/resultado/numero/' + dados.id)
 
         })
             .catch((err) => {
